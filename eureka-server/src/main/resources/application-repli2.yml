@@ -1,0 +1,19 @@
+# 指定运行端口
+server:
+  port: 8083
+
+# 指定服务名称
+spring:
+  application:
+    name: eureka-server
+
+# 指定主机地址
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      # 注册到另一个Eureka注册中心
+      defaultZone: http://peer1:8082/eureka/
