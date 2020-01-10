@@ -16,3 +16,6 @@ eureka:
     service-url:
       # 配置注册中心地址
       defaultZone: http://admin:123456@localhost:8013/eureka/
+    # 禁用刷新Eureka客户端的功能。避免发生刷新时，客户端将从Eureka服务器中注销，并且可能会在短暂的时间内不提供给定服务的所有实例。
+    refresh:
+      enable: false

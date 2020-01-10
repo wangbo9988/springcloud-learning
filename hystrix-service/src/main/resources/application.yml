@@ -1,0 +1,22 @@
+# 服务端口
+server:
+  port: 8401
+
+# 服务名称
+spring:
+  application:
+    name: hystrix-service
+
+eureka:
+  client:
+    # 向Eureka注册中心注册服务
+    register-with-eureka: true
+    # 获取注册中心的注册列表
+    fetch-registry: true
+    service-url:
+      # 注册地址
+      defaultZone: http://localhost:8081/eureka/
+
+# 接口调用地址
+service-url:
+  user-service: http://user-service/8201
