@@ -1,8 +1,8 @@
-# 指定运行端口
+# 服务端口
 server:
   port: 8001
 
-# 指定服务名称
+# 应用名称
 spring:
   application:
     name: eureka-client

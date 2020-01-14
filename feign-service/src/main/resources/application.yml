@@ -6,9 +6,23 @@ server:
 spring:
   application:
     name: feign-service
+
 eureka:
   client:
+    # 注册到Eureka的注册中心
     register-with-eureka: true
+    # 获取注册实例列表
     fetch-registry: true
     service-url:
+      # 配置注册中心地址
       defaultZone: http://localhost:8081/eureka/
+
+feign:
+  hystrix:
+    # 开启hystrix功能
+    enabled: true
+
+logging:
+  level:
+    # 设置日志级别为debug
+    com.jourwon.springcloud.service: debug

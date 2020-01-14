@@ -2,6 +2,7 @@ package com.cn.bo.service;
 
 import com.cn.bo.pojo.Result;
 import com.cn.bo.pojo.User;
+import com.cn.bo.service.impl.UserFallbackServiceImpl;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,7 +16,7 @@ import java.util.List;
  * @Version v1.0
  */
 
-@FeignClient(value = "user-service", fallback = UserFallbackService.class)
+@FeignClient(value = "user-service", fallback = UserFallbackServiceImpl.class)
 public interface UserService {
 
     @PostMapping("/user/insert")
