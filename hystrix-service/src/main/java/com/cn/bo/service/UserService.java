@@ -29,7 +29,6 @@ import java.util.concurrent.Future;
  * @Date 2020/1/10 4:20 下午
  * @Version v1.0
  */
-
 @Service
 public class UserService {
 
@@ -55,57 +54,59 @@ public class UserService {
     public Result fallbackMethod1(@PathVariable Long id) {
         return new Result("服务调用失败", 500);
     }
-//
-//    @HystrixCommand(fallbackMethod = "fallbackMethod2", ignoreExceptions = {NullPointerException.class})
-//    public Result getUserException(Long id) {
-//        if (id == 1) {
-//            throw new IndexOutOfBoundsException();
-//        } else if (id == 2) {
-//            throw new NullPointerException();
-//        }
-//
-//        return restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
-//    }
-//
-//    public Result fallbackMethod2(@PathVariable Long id, Throwable e) {
-//        LOGGER.error("id {},throwable class:{}", id, e.getClass());
-//        return new Result("服务调用失败", 500);
-//    }
-//
-//    @HystrixCommand(fallbackMethod = "fallbackMethod1",
-//            commandKey = "getUserCommand",
-//            groupKey = "getUserGroup",
-//            threadPoolKey = "getUserThreadPool")
-//    public Result getUserCommand(Long id) {
-//        return restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
-//    }
-//
-//
-//    @CacheResult(cacheKeyMethod = "getCacheKey")
-//    @HystrixCommand(fallbackMethod = "fallbackMethod1", commandKey = "getUserCache")
-//    public Result getUserCache(Long id) {
-//        LOGGER.info("getUserCache id:{}", id);
-//        return restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
-//    }
-//
-//    /**
-//     * 为缓存生成key的方法
-//     *
-//     * @return
-//     */
-//    public String getCacheKey(Long id) {
-//        return String.valueOf(id);
-//    }
-//
-//    @HystrixCommand
-//    @CacheRemove(commandKey = "getUserCache", cacheKeyMethod = "getCacheKey")
-//    public Result removeCache(Long id) {
-//        LOGGER.info("removeCache id:{}", id);
-//        return restTemplate.postForObject(userServiceUrl + "/user/delete/{1}", null, Result.class, id);
-//    }
-//
-//    @HystrixCollapser(batchMethod = "listUsersByIds",collapserProperties = {
-//            @HystrixProperty(name = "timerDelayInMilliseconds",value = "100")
+
+    @HystrixCommand(fallbackMethod = "fallbackMethod2", ignoreExceptions = {NullPointerException.class})
+    public Result getUserException(Long id) {
+        if (id == 1) {
+            throw new IndexOutOfBoundsException();
+        } else if (id == 2) {
+            throw new NullPointerException();
+        }
+
+        return restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
+    }
+
+    public Result fallbackMethod2(@PathVariable Long id, Throwable e) {
+        LOGGER.error("id {},throwable class:{}", id, e.getClass());
+        return new Result("服务调用失败", 500);
+    }
+
+    @HystrixCommand(fallbackMethod = "fallbackMethod1",
+            commandKey = "getUserCommand",
+            groupKey = "getUserGroup",
+            threadPoolKey = "getUserThreadPool")
+    public Result getUserCommand(Long id) {
+        return restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
+    }
+
+
+    @CacheResult(cacheKeyMethod = "getCacheKey")
+    @HystrixCommand(fallbackMethod = "fallbackMethod1", commandKey = "getUserCache")
+    public Result getUserCache(Long id) {
+        LOGGER.info("getUserCache id:{}", id);
+        return restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
+    }
+
+    /**
+     * 为缓存生成key的方法
+     *
+     * @return
+     */
+
+    public String getCacheKey(Long id) {
+        return String.valueOf(id);
+    }
+
+    @HystrixCommand
+    @CacheRemove(commandKey = "getUserCache", cacheKeyMethod = "getCacheKey")
+    public Result removeCache(Long id) {
+        LOGGER.info("removeCache id:{}", id);
+        return restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
+    }
+
+
+//    @HystrixCollapser(batchMethod = "listUsersByIds", collapserProperties = {
+//            @HystrixProperty(name = "timerDelayInMilliseconds", value = "100")
 //    })
 //    public Future<User> getUserFuture(Long id) {
 //        return new AsyncResult<User>() {
@@ -114,18 +115,27 @@ public class UserService {
 //                Result result = restTemplate.getForObject(userServiceUrl + "/user/{1}", Result.class, id);
 //                Map data = (Map) result.getData();
 //                User user = BeanUtil.mapToBean(data, User.class, true);
-//                LOGGER.info("getUserById username:{}",user.getUsername());
+//                LOGGER.info("getUserById username:{}", user.getUsername());
 //                return user;
 //            }
 //        };
 //    }
-//
-//    @HystrixCommand
-//    public List<User> listUsersByIds(List<Long> ids) {
-//        LOGGER.info("listUsersByIds:{}",ids);
-//        Result result = restTemplate.getForObject(userServiceUrl + "/user/listUsersByIds?ids={1}", Result.class, CollUtil.join(ids, ","));
-//        return (List<User>)result.getData();
-//    }
+
+    @HystrixCollapser(batchMethod = "listUsersByIds", collapserProperties = {
+            @HystrixProperty(name = "timerDelayInMilliseconds", value = "100")
+    })
+    public Future<User> getUserFuture(Long id) {
+        return null;
+    }
+
+    @HystrixCommand
+    public List<User> listUsersByIds(List<Long> ids) {
+        LOGGER.info("listUsersByIds:{}", ids);
+        System.out.println("请求合并");
+
+        Result result = restTemplate.getForObject(userServiceUrl + "/user/listUsersByIds?ids={1}", Result.class, CollUtil.join(ids, ","));
+        return (List<User>) result.getData();
+    }
 
 
 }

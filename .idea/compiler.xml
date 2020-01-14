@@ -7,9 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hystrix-service" />
+        <module name="feign-service" />
         <module name="eureka-server" />
         <module name="eureka-client" />
         <module name="ribbon-service" />
+        <module name="hystrix-dashboard" />
+        <module name="turbine-service" />
         <module name="user-service" />
         <module name="eureka-security-server" />
       </profile>
@@ -21,8 +24,11 @@
       <module name="eureka-client" options="-parameters" />
       <module name="eureka-security-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="feign-service" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
       <module name="hystrix-service" options="-parameters" />
       <module name="ribbon-service" options="-parameters" />
+      <module name="turbine-service" options="-parameters" />
       <module name="user-service" options="-parameters" />
     </option>
   </component>
