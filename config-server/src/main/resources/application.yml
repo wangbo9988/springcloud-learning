@@ -1,0 +1,28 @@
+# 服务端口
+server:
+  port: 8901
+
+# 应用名称
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          # 配置存储配置信息的Git地址
+          uri: https://gitee.com/wangbo9988/spring-cloud.git
+          username: wangbo9988
+          password: wb9988//++
+          # 启动时从Git获取配置
+          clone-on-start: true
+          # 获取子路径下的配置
+          # search-paths: config
+          search-paths: '{application}'
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8081/eureka/

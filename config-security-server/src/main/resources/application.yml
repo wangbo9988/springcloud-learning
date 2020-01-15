@@ -1,0 +1,21 @@
+# 服务名称
+server:
+  port: 8905
+
+spring:
+  application:
+    # 服务名称
+    name: config-security-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/wangbo9988/spring-cloud.git
+          username: wangbo9988
+          password: wb9988//++
+          clone-on-start: true
+
+  security:
+    user:
+      name: admin
+      password: 123456

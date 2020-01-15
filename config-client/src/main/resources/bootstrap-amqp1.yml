@@ -1,0 +1,40 @@
+# 服务端口
+server:
+  port: 9004
+
+spring:
+  application:
+    # 应用名称
+    name: config-client
+  cloud:
+    # config客户端配置
+    config:
+      # 分支名称
+      label: master
+      # 启动配置后缀
+      profile: dev
+      # 配置文件名称
+      name: config
+      discovery:
+        enabled: true
+        service-id: config-server
+
+  # RabbitMQ配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8081/eureka/
