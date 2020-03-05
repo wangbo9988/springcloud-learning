@@ -1,0 +1,119 @@
+# 设置服务端口
+server:
+  port: 9201
+
+# 设置接口调用地址
+service-url:
+  user-service: http://localhost:8201
+
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        # 设置路由ID
+#        - id: path_route
+#          # 匹配后路由地址
+#          uri: ${service-url.user-service}/user/{id}
+#          predicates:
+#            # 断言，路径相匹配的进行路由
+#            - Path=/user/{id}
+#            - After=2020-02-19T12:25:30+08:00[Asia/Shanghai]
+
+# AddRequestParamer GatewayFilter
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: add_request_parameter_route
+#          uri: http://localhost:8201
+#          filters:
+#            - AddRequestParameter=username, jourwon
+#          predicates:
+#            - Method: GET
+
+# StripPrefix GatewayFilter
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: strip_prefix_route
+#          uri: http://localhost:8201
+#          predicates:
+#            - Path=/user-service/**
+#          filters:
+#            - StripPrefix=2
+
+#  PrefixPath GatewayFilter
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: prefix_path_route
+#          uri: http://localhost:8201
+#          predicates:
+#            - Method: GET
+#          filters:
+#            - PrefixPath=/user
+
+# Hystrix GatewayFilter
+#spring:
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: hystrix_route
+#          uri: ${service-url.user-service}
+#          predicates:
+#            - Method=GET
+#          filters:
+#            - name: Hystrix
+#              args:
+#                name: fallbackmd
+#                fallback-uri: forward:/fallback
+
+# RateLimiter Gateway
+#spring:
+#  redis:
+#    host: localhost
+#    password: 123456
+#    port: 6379
+#  cloud:
+#    gateway:
+#      routes:
+#        - id: requestratelimiter_route
+#          uri: http://localhost:8201
+#          filters:
+#            - name: RequestRateLimiter
+#              args:
+#                # 每秒允许处理的请求数量
+#                redis-rate-limiter.replenishRate: 1
+#                # 每秒最大的请求处理数量
+#                redis-rate-limiter.burstCapacity: 1
+#                # 限流策略，对应侧的Bean
+#                key-resolver: "#{@ipKeyResolver}"
+#          predicates:
+#            - Method=GET
+##logging:
+##  level:
+##    org.springframework.cloud.gateway: debug
+
+# Retry GatewayFilter
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: retry_route
+          uri: http://localhost:8201
+          predicates:
+            - Method=GET
+          filters:
+            - name: Retry
+              args:
+                # 需要进行重试的次数
+                retries: 1
+                # 返回那个状态码时，进行重试
+                statuses: BAD_GATEWAY
+                backoff:
+                  firstBackoff: 10ms
+                  maxBackoff: 50ms
+                  factor: 2
+                  basedOnPreviousValues: false
