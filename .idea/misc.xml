@@ -23,8 +23,8 @@
         <option value="$PROJECT_DIR$/config-client/pom.xml" />
         <option value="$PROJECT_DIR$/config-security-server/pom.xml" />
         <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
-        <option value="$PROJECT_DIR$/admin-service/pom.xml" />
         <option value="$PROJECT_DIR$/admin-client/pom.xml" />
+        <option value="$PROJECT_DIR$/admin-sever/pom.xml" />
       </list>
     </option>
   </component>

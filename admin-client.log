@@ -1,58 +1,122 @@
-2020-03-05 22:17:51.835  INFO 974 --- [main] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 974 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
-2020-03-05 22:17:51.842  INFO 974 --- [main] com.cn.bo.AdminClientApplication         : No active profile set, falling back to default profiles: default
-2020-03-05 22:17:53.066  INFO 974 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
-2020-03-05 22:17:53.073  INFO 974 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-05 22:17:53.074  INFO 974 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-03-05 22:17:53.145  INFO 974 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-05 22:17:53.145  INFO 974 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1261 ms
-2020-03-05 22:17:53.312  INFO 974 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
-2020-03-05 22:17:53.434  INFO 974 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-03-05 22:17:53.586  INFO 974 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-03-05 22:17:53.631  INFO 974 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
-2020-03-05 22:17:53.701  INFO 974 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
-2020-03-05 22:17:53.705  INFO 974 --- [main] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 2.229 seconds (JVM running for 2.738)
-2020-03-05 22:17:54.283  INFO 974 --- [RMI TCP Connection(3)-192.168.31.111] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-05 22:17:54.283  INFO 974 --- [RMI TCP Connection(3)-192.168.31.111] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-05 22:17:54.290  INFO 974 --- [RMI TCP Connection(3)-192.168.31.111] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
-2020-03-05 22:17:54.336  INFO 974 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 9bf066780095
-2020-03-05 22:18:46.060  INFO 974 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
-2020-03-05 22:18:46.061  INFO 974 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-03-05 22:20:11.830  INFO 1006 --- [main] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 1006 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
-2020-03-05 22:20:11.837  INFO 1006 --- [main] com.cn.bo.AdminClientApplication         : The following profiles are active: eureka
-2020-03-05 22:20:12.757  INFO 1006 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
-2020-03-05 22:20:12.777  INFO 1006 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-05 22:20:12.777  INFO 1006 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-03-05 22:20:12.829  INFO 1006 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-05 22:20:12.830  INFO 1006 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 964 ms
-2020-03-05 22:20:13.012  INFO 1006 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
-2020-03-05 22:20:13.140  INFO 1006 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-03-05 22:20:13.312  INFO 1006 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-03-05 22:20:13.362  INFO 1006 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
-2020-03-05 22:20:13.433  INFO 1006 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
-2020-03-05 22:20:13.441  INFO 1006 --- [main] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 2.944 seconds (JVM running for 3.62)
-2020-03-05 22:20:13.587  WARN 1006 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=admin-client, managementUrl=http://192.168.31.111:9305/actuator, healthUrl=http://192.168.31.111:9305/actuator/health, serviceUrl=http://192.168.31.111:9305/) at spring-boot-admin ([http://localhost:9301/instances]): I/O error on POST request for "http://localhost:9301/instances": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused). Further attempts are logged on DEBUG level
-2020-03-05 22:20:13.697  INFO 1006 --- [RMI TCP Connection(3)-192.168.31.111] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-05 22:20:13.698  INFO 1006 --- [RMI TCP Connection(3)-192.168.31.111] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-05 22:20:13.708  INFO 1006 --- [RMI TCP Connection(3)-192.168.31.111] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
-2020-03-05 22:20:19.087  INFO 1006 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
-2020-03-05 22:20:19.088  INFO 1006 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-03-05 22:20:27.182  INFO 1017 --- [main] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 1017 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
-2020-03-05 22:20:27.185  INFO 1017 --- [main] com.cn.bo.AdminClientApplication         : The following profiles are active: eureka
-2020-03-05 22:20:28.637  INFO 1017 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
-2020-03-05 22:20:28.646  INFO 1017 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-03-05 22:20:28.646  INFO 1017 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-03-05 22:20:28.722  INFO 1017 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-03-05 22:20:28.722  INFO 1017 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1467 ms
-2020-03-05 22:20:28.898  INFO 1017 --- [main] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
-2020-03-05 22:20:29.019  INFO 1017 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-03-05 22:20:29.284  INFO 1017 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
-2020-03-05 22:20:29.471  INFO 1017 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
-2020-03-05 22:20:29.640  INFO 1017 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
-2020-03-05 22:20:29.646  INFO 1017 --- [main] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 2.864 seconds (JVM running for 3.418)
-2020-03-05 22:20:29.875  WARN 1017 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=admin-client, managementUrl=http://192.168.31.111:9305/actuator, healthUrl=http://192.168.31.111:9305/actuator/health, serviceUrl=http://192.168.31.111:9305/) at spring-boot-admin ([http://localhost:9301/instances]): I/O error on POST request for "http://localhost:9301/instances": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused). Further attempts are logged on DEBUG level
-2020-03-05 22:20:30.118  INFO 1017 --- [RMI TCP Connection(4)-192.168.31.111] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-03-05 22:20:30.118  INFO 1017 --- [RMI TCP Connection(4)-192.168.31.111] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-03-05 22:20:30.126  INFO 1017 --- [RMI TCP Connection(4)-192.168.31.111] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2020-03-05 22:20:39.955  INFO 1017 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 9bf066780095
-2020-03-05 22:20:55.529  INFO 1017 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
-2020-03-05 22:20:55.530  INFO 1017 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:39:02.526  INFO 4658 --- [restartedMain] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 4658 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
+2020-03-07 10:39:02.539  INFO 4658 --- [restartedMain] com.cn.bo.AdminClientApplication         : No active profile set, falling back to default profiles: default
+2020-03-07 10:39:02.619  INFO 4658 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-07 10:39:02.620  INFO 4658 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-07 10:39:03.742  INFO 4658 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
+2020-03-07 10:39:03.749  INFO 4658 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 10:39:03.749  INFO 4658 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 10:39:03.801  INFO 4658 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 10:39:03.801  INFO 4658 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1181 ms
+2020-03-07 10:39:03.982  INFO 4658 --- [restartedMain] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-03-07 10:39:04.127  INFO 4658 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:39:04.284  INFO 4658 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-03-07 10:39:04.384  WARN 4658 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-03-07 10:39:04.397  INFO 4658 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2020-03-07 10:39:04.459  INFO 4658 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
+2020-03-07 10:39:04.463  INFO 4658 --- [restartedMain] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 3.131 seconds (JVM running for 4.19)
+2020-03-07 10:39:04.906  INFO 4658 --- [RMI TCP Connection(9)-192.168.1.108] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 10:39:04.907  INFO 4658 --- [RMI TCP Connection(9)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 10:39:04.914  INFO 4658 --- [RMI TCP Connection(9)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-03-07 10:39:04.998  INFO 4658 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 7cf6ab155e7e
+2020-03-07 10:39:44.879  INFO 4658 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-03-07 10:39:44.881  INFO 4658 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:40:32.646  INFO 4696 --- [restartedMain] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 4696 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
+2020-03-07 10:40:32.649  INFO 4696 --- [restartedMain] com.cn.bo.AdminClientApplication         : No active profile set, falling back to default profiles: default
+2020-03-07 10:40:32.698  INFO 4696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-07 10:40:32.698  INFO 4696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-07 10:40:34.672  INFO 4696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
+2020-03-07 10:40:34.683  INFO 4696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 10:40:34.683  INFO 4696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 10:40:34.820  INFO 4696 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 10:40:34.821  INFO 4696 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2122 ms
+2020-03-07 10:40:35.178  INFO 4696 --- [restartedMain] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-03-07 10:40:35.310  INFO 4696 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:40:35.468  INFO 4696 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-03-07 10:40:35.522  WARN 4696 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-03-07 10:40:35.538  INFO 4696 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2020-03-07 10:40:35.716  INFO 4696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
+2020-03-07 10:40:35.721  INFO 4696 --- [restartedMain] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 3.574 seconds (JVM running for 4.436)
+2020-03-07 10:40:36.202  INFO 4696 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 7cf6ab155e7e
+2020-03-07 10:40:36.239  INFO 4696 --- [RMI TCP Connection(4)-192.168.1.108] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 10:40:36.239  INFO 4696 --- [RMI TCP Connection(4)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 10:40:36.250  INFO 4696 --- [RMI TCP Connection(4)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-03-07 10:41:11.622  INFO 4696 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-03-07 10:41:11.623  INFO 4696 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:42:08.549  INFO 4744 --- [restartedMain] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 4744 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
+2020-03-07 10:42:08.552  INFO 4744 --- [restartedMain] com.cn.bo.AdminClientApplication         : No active profile set, falling back to default profiles: default
+2020-03-07 10:42:08.647  INFO 4744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-07 10:42:08.647  INFO 4744 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-07 10:42:09.805  INFO 4744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
+2020-03-07 10:42:09.812  INFO 4744 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 10:42:09.812  INFO 4744 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 10:42:09.861  INFO 4744 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 10:42:09.861  INFO 4744 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1213 ms
+2020-03-07 10:42:10.018  INFO 4744 --- [restartedMain] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-03-07 10:42:10.145  INFO 4744 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:42:10.315  WARN 4744 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-03-07 10:42:10.331  INFO 4744 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2020-03-07 10:42:10.466  INFO 4744 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
+2020-03-07 10:42:10.470  INFO 4744 --- [restartedMain] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 2.469 seconds (JVM running for 3.244)
+2020-03-07 10:42:11.032  INFO 4744 --- [RMI TCP Connection(4)-192.168.1.108] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 10:42:11.033  INFO 4744 --- [RMI TCP Connection(4)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 10:42:11.038  INFO 4744 --- [RMI TCP Connection(4)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-03-07 10:42:34.510  INFO 4744 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:48:11.724  INFO 4821 --- [restartedMain] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 4821 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
+2020-03-07 10:48:11.730  INFO 4821 --- [restartedMain] com.cn.bo.AdminClientApplication         : No active profile set, falling back to default profiles: default
+2020-03-07 10:48:11.924  INFO 4821 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-07 10:48:11.924  INFO 4821 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-07 10:48:14.068  INFO 4821 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
+2020-03-07 10:48:14.079  INFO 4821 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 10:48:14.079  INFO 4821 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-07 10:48:14.157  INFO 4821 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 10:48:14.158  INFO 4821 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2233 ms
+2020-03-07 10:48:14.440  INFO 4821 --- [restartedMain] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-03-07 10:48:14.643  INFO 4821 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:48:14.935  INFO 4821 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-03-07 10:48:15.034  INFO 4821 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-03-07 10:48:15.103  INFO 4821 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2020-03-07 10:48:15.412  INFO 4821 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
+2020-03-07 10:48:15.417  INFO 4821 --- [restartedMain] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 4.369 seconds (JVM running for 5.062)
+2020-03-07 10:48:15.501  WARN 4821 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Failed to register application as Application(name=admin-client, managementUrl=http://192.168.1.108:9305/actuator, healthUrl=http://192.168.1.108:9305/actuator/health, serviceUrl=http://192.168.1.108:9305/) at spring-boot-admin ([http://localhost:9301/instances]): I/O error on POST request for "http://localhost:9301/instances": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused). Further attempts are logged on DEBUG level
+2020-03-07 10:48:15.669  INFO 4821 --- [RMI TCP Connection(9)-192.168.1.108] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 10:48:15.669  INFO 4821 --- [RMI TCP Connection(9)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 10:48:15.676  INFO 4821 --- [RMI TCP Connection(9)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-03-07 10:48:45.826  INFO 4821 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 7cf6ab155e7e
+2020-03-07 10:49:07.722  INFO 4821 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-03-07 10:49:07.723  INFO 4821 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:57:12.141  INFO 4956 --- [restartedMain] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 4956 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
+2020-03-07 10:57:12.146  INFO 4956 --- [restartedMain] com.cn.bo.AdminClientApplication         : No active profile set, falling back to default profiles: default
+2020-03-07 10:57:12.221  INFO 4956 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-07 10:57:12.221  INFO 4956 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-07 10:57:13.514  INFO 4956 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
+2020-03-07 10:57:13.520  INFO 4956 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 10:57:13.521  INFO 4956 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-03-07 10:57:13.569  INFO 4956 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 10:57:13.569  INFO 4956 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1347 ms
+2020-03-07 10:57:13.765  INFO 4956 --- [restartedMain] o.s.b.a.e.web.ServletEndpointRegistrar   : Registered '/actuator/jolokia' to jolokia-actuator-endpoint
+2020-03-07 10:57:13.877  INFO 4956 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 10:57:14.032  INFO 4956 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-03-07 10:57:14.143  WARN 4956 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-03-07 10:57:14.164  INFO 4956 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2020-03-07 10:57:14.235  INFO 4956 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
+2020-03-07 10:57:14.240  INFO 4956 --- [restartedMain] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 2.542 seconds (JVM running for 3.16)
+2020-03-07 10:57:14.502  INFO 4956 --- [RMI TCP Connection(4)-192.168.1.108] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-07 10:57:14.503  INFO 4956 --- [RMI TCP Connection(4)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-03-07 10:57:14.508  INFO 4956 --- [RMI TCP Connection(4)-192.168.1.108] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2020-03-07 10:57:14.734  INFO 4956 --- [registrationTask1] d.c.b.a.c.r.ApplicationRegistrator       : Application registered itself as 7cf6ab155e7e
+2020-03-07 10:58:11.287  INFO 4956 --- [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-03-07 10:58:11.288  INFO 4956 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-07 11:04:28.719  INFO 5064 --- [restartedMain] com.cn.bo.AdminClientApplication         : Starting AdminClientApplication on MrWangdeMacBook-Pro.local with PID 5064 (/Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning/admin-client/target/classes started by mr.wang in /Users/mr.wang/Projects/JavaProjects/SpringCloud/springcloud-learning)
+2020-03-07 11:04:28.723  INFO 5064 --- [restartedMain] com.cn.bo.AdminClientApplication         : No active profile set, falling back to default profiles: default
+2020-03-07 11:04:28.783  INFO 5064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-03-07 11:04:28.784  INFO 5064 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-03-07 11:04:29.867  INFO 5064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9305 (http)
+2020-03-07 11:04:29.876  INFO 5064 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-03-07 11:04:29.876  INFO 5064 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-03-07 11:04:29.978  INFO 5064 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-03-07 11:04:29.978  INFO 5064 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1194 ms
+2020-03-07 11:04:30.200  INFO 5064 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-07 11:04:30.316  WARN 5064 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-03-07 11:04:30.376  INFO 5064 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9305 (http) with context path ''
+2020-03-07 11:04:30.380  INFO 5064 --- [restartedMain] com.cn.bo.AdminClientApplication         : Started AdminClientApplication in 1.999 seconds (JVM running for 2.624)
+2020-03-07 11:04:59.195  INFO 5064 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

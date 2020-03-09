@@ -11,25 +11,30 @@
         <module name="config-security-server" />
         <module name="hystrix-service" />
         <module name="zuul-proxy" />
+        <module name="api-gateway" />
         <module name="eureka-client" />
-        <module name="admin-service" />
-        <module name="hystrix-dashboard" />
         <module name="turbine-service" />
+        <module name="admin-sever" />
         <module name="feign-service" />
         <module name="ribbon-service" />
         <module name="eureka-server" />
         <module name="user-service" />
-        <module name="api-gateway" />
+        <module name="hystrix-dashboard" />
         <module name="eureka-security-server" />
         <module name="admin-client" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="admin-server" target="13.0.1" />
+      <module name="admin-service" target="13.0.1" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="admin-client" options="-parameters" />
+      <module name="admin-server" options="-parameters" />
       <module name="admin-service" options="-parameters" />
+      <module name="admin-sever" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="config-client" options="-parameters" />
       <module name="config-security-server" options="-parameters" />

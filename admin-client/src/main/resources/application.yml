@@ -1,16 +1,13 @@
-# 服务端口
 server:
   port: 9305
 
-
 spring:
   application:
-    # 服务名称
     name: admin-client
   boot:
     admin:
       client:
-        # 配置admin-server的服务地址
+        # 配置admin-server地址
         url: http://localhost:9301
 
 management:
@@ -20,7 +17,13 @@ management:
         include: '*'
   endpoint:
     health:
-      show-components: always
+      show-details: always
+
+eureka:
+  client:
+    service-url:
+      # 配置注册中心地址
+      defaultZone: http://localhost:8081/eureka/
 
 # 添加开启admin的日志监控
 logging:
